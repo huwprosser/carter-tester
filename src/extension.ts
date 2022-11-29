@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { NodeDependenciesProvider } from "./nodeDependencies";
+import { AgentsProvider } from "./agents";
 
 export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(
@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
         )
     );
     const tree = vscode.window.createTreeView("carter-tester", {
-        treeDataProvider: new NodeDependenciesProvider(),
+        treeDataProvider: new AgentsProvider(),
     });
 
     tree.onDidChangeSelection((e) => {
@@ -227,20 +227,31 @@ class CatCodingPanel {
 				<title>Carter Chat</title>
 			</head>
 			<body>
-				<img src="${logoUri}" class="logo" />
-				
-				<h1 id="lines-of-code-counter">${phrase}</h1>
-				
-				<input type="text" id="key" placeholder="Enter Agent Key"/>
-				
-				<p id="output">Agent Output</p>
-				<input type="text" id="chat"/>
-				<hr>
-				<p>Sent</p>
-				<pre id="sent"></pre>
-				<p>Response</p>
-				<pre id="raw"></pre>
-
+                <div class="top-bar">
+				    <img src="${logoUri}" class="logo" />
+                    <input type="text" id="key" placeholder="Enter agent Key"/>
+				</div>
+                <div class="main">
+                    <div class="left">
+                        <div class="config">
+                            
+                            <input type="text" id="uuid" placeholder="UUID"/>
+                        </div>
+                        <div class="chat">
+                            <input type="text" placeholder="Enter a message..." id="chat"/>
+                            <p>Agent Response:</p>
+                            <p id="output"></p>
+                        </div>
+                    </div>
+                    <div class="right">
+                       
+                        <p>Sent</p>
+                        <pre id="sent"></pre>
+                        <p>Full Response</p>
+                        <div id="spin"></div>
+                        <pre id="raw"></pre>
+                    </div>
+                </div>
 				<script nonce="${nonce}" src="${scriptUri}"></script>
 			</body>
 			</html>`;

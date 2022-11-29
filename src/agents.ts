@@ -1,8 +1,6 @@
 import * as vscode from "vscode";
 
-export class NodeDependenciesProvider
-    implements vscode.TreeDataProvider<TreeItem>
-{
+export class AgentsProvider implements vscode.TreeDataProvider<TreeItem> {
     constructor() {}
 
     getTreeItem(element: TreeItem): TreeItem {
@@ -13,7 +11,7 @@ export class NodeDependenciesProvider
         element?: TreeItem | undefined
     ): vscode.ProviderResult<TreeItem[]> {
         // return dummy list
-        return Promise.resolve([new TreeItem("Item 1", "Agent 46")]);
+        return Promise.resolve([new TreeItem("Test Tool", "Test Tool")]);
     }
 }
 
