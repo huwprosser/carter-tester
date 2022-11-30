@@ -234,8 +234,8 @@ class CatCodingPanel {
                 <div class="main">
                     <div class="left">
                         <div class="config">
-                            
                             <input type="text" id="uuid" placeholder="UUID"/>
+                            <input type="text" id="endpoint" placeholder="Endpoint" value="https://api.carterapi.com/v0/chat"/>
                         </div>
                         <div class="chat">
                             <input type="text" placeholder="Enter a message..." id="chat"/>

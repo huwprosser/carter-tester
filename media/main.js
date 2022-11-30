@@ -9,6 +9,7 @@ window.onload = function () {
     var status = document.getElementById("spin");
     var key = document.getElementById("key");
     var uuid = document.getElementById("uuid");
+    var endpoint = document.getElementById("endpoint");
 
     function chat(e) {
         if (!key || !uuid) {
@@ -16,7 +17,7 @@ window.onload = function () {
         }
 
         // if key was enter
-        if (e.keyCode === 13) {
+        if (e.keyCode === 13 && endpoint) {
             var textToSend = JSON.stringify(
                 {
                     api_key: key.value,
@@ -34,7 +35,7 @@ window.onload = function () {
             if (textSent !== null) {
                 textSent.innerHTML = textToSend;
             }
-            fetch("https://api.carterapi.com/v0/chat", {
+            fetch(endpoint.value, {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
