@@ -1,6 +1,6 @@
 {
-    "name": "carter-tester",
-    "displayName": "carter-tester",
+    "name": "carter",
+    "displayName": "Carter API Tester",
     "description": "An extension allowing you to test your carter agent's without leaving VSCode.",
     "version": "0.0.1",
     "engines": {
@@ -14,13 +14,6 @@
     ],
     "main": "./dist/extension.js",
     "contributes": {
-        "commands": [
-            {
-                "command": "catCoding.start",
-                "title": "Start cat coding session",
-                "category": "Cat Coding"
-            }
-        ],
         "viewsContainers": {
             "activitybar": [
                 {
