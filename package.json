@@ -3,7 +3,7 @@
     "displayName": "Carter API Tester",
     "description": "An extension allowing you to test your carter agent's without leaving VSCode.",
     "version": "0.0.1",
-    "publisher": "Carter Labs Ltd",
+    "publisher": "CarterLabsLtd",
     "repository": {
         "type": "git",
         "url": "https://github.com/huwprosser/carter-tester"
