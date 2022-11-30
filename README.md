@@ -6,7 +6,9 @@ This extension provides a VS-Code friendly way to test your agent's API endpoint
 ## Features
 
 ✅ Test your agent outside the Carter Dashboard.
+
 ✅ Use your own API key, UUID and even a custom endpoint (for testing middle-man servers etc).
+
 ✅ View the entire API response including custom triggers, senitment analysis and more.
 
 ![Main API Test Panel](screenshot.png)
